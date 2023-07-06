@@ -1,0 +1,1323 @@
+/***************************/
+
+/*** Schedule Redelivery ***/
+
+/***************************/
+
+/* START STEP 1 */
+
+.redelivery-intro {
+	padding-top: 30px;
+}
+
+a sup {
+	display: inline-block;
+	text-decoration: none;
+}
+
+.uspsLinkColored {
+	color: #3573b1 !important;
+    text-decoration: underline !important;
+}
+
+.error-icon {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background-image: url(../other/anyapp_outage_apology.htm);
+	background-size: 16px 16px;
+	display: inline-block;
+	margin-bottom: 0px;
+	outline: none !important;
+	cursor: pointer;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: -3px;
+}
+
+.redelivery-intro sup {
+	top: 0;
+}
+
+.redelivery-intro p + p {
+	padding-top: 20px;
+}
+
+.step-one-form .button-wrapper {
+	padding-bottom: 30px;
+}
+
+.privacy-act-statement-header {
+	color: #333366;
+	font-family: "HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dropdown-selection-container .dropdown-items-wrapper {
+	font-family: "HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dropdown-selection .dropdown-menu li a {
+	font-family: "HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dropdown-selection .btn:hover,
+.dropdown-selection .btn:active {
+	color: #333366;
+}
+
+.privacy-act-statement-wrapper p + p {
+	padding-top: 5px;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.step-one-validation,
+.redelivery-unavailable-wrapper,
+.step-wrapper .step-drawer,
+.urbanization-code-input,
+.tracking-results-wrapper,
+.return-to-sender-notifcation,
+.select-date-wrapper,
+.redelivery-pickup-wrapper,
+.receive-confirmation-wrapper,
+.return-to-sender-notification,
+.delivery-location-wrapper,
+.representative-requirements-wrapper,
+.carrier-redeliver-required,
+.update-button-wrapper,
+.selected-package-amount-wrapper,
+.redelivery-selection-confirmed,
+.step-confirmation-number,
+.redelivery-modified-header-wrapper,
+.redelivery-not-submitted-header-wrapper,
+.request-modified-confirmation-wrapper,
+.modify-step-alert-message-wrapper,
+.step-four-drawer,
+span.ui-datepicker-year {
+	display: none;
+}
+
+.name-primary-address-wrapper p + p,
+.phone-wrapper p + p,
+.email-wrapper p + p,
+.barcode-number-wrapper p + p {
+	padding-top: 0px;
+}
+
+.name-primary-address-wrapper,
+.phone-wrapper,
+.email-wrapper {
+	padding-top: 20px;
+}
+
+.edit-address-wrapper {
+	padding-top: 15px;
+}
+
+.name-address-header,
+.phone-header,
+.email-header,
+.selected-tracking-number,
+.barcode-number-header {
+	font-family: "HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+.selected-tracking-number {
+	font-weight: bold;
+}
+*/
+
+.step-header {
+	cursor: pointer;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.step-header a:hover {
+	color: #333366;
+}
+
+.step-wrapper h2:after {
+	content: "";
+	display: inline-block;
+	background-size: 22px 22px;
+	width: 22px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	height: 25px;
+	background-image: url(../img/blue-caret-down.svg);
+	-ms-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	transition: transform 0.2s ease-out;
+	float: right;
+}
+
+.step-wrapper h2.normal a:hover {
+	color: #333366;
+}
+
+.step-wrapper.active h2:after {
+	background-image: url(../img/blue-caret-down.svg);
+	-ms-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+	transition: transform 0.2s ease-out;
+}
+
+.step-wrapper.active .step-drawer {
+	display: block;
+}
+
+.step.horizontal-line {
+	margin-top: 0px;
+}
+
+.active .step.horizontal-line {
+	margin-top: 30px;
+}
+
+/*p.available-header:before,
+p.confirmed-header:before {
+	background-image: url(../images/available-icon.png);
+	content: "";
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	margin-right: 10px;
+	background-size: 14px;
+	vertical-align: middle;
+}*/
+
+.availableIcon {
+    width: 16px;
+	height: 16px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	margin-right: 10px;
+	background-size: 14px;
+	vertical-align: middle;
+}
+
+p.unavailable-header:before {
+	background-image: url(../img/unavailable-icon.png);
+	content: "";
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	margin-right: 10px;
+	background-size: 14px;
+	vertical-align: middle;
+}
+
+.redelivery-unavailable-wrapper,
+.redelivery-available-wrapper {
+	padding-top: 20px;
+}
+
+.unavailable-header,
+.available-header,
+.confirmed-header {
+	font-family: "HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.unavailable-content {
+	padding-left: 26px;
+}
+
+.redelivery-unavailable-wrapper p {
+	color: #e71921;
+}
+
+a.inline-link.secondary.track-package {
+	margin-top: 15px;
+	display: initial;
+}
+
+.redelivery-available-wrapper p,
+.address-redelivery-confirmed p,
+.redelivery-selection-confirmed p {
+	color: #218748;
+}
+
+.address-redelivery-confirmed,
+.redelivery-selection-confirmed {
+	padding-top: 15px;
+}
+
+.btn-default.focus,
+.btn-default:focus {
+	background-color: #fff;
+	border-color: #333366;
+}
+
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default:hover {
+	background-color: #fff;
+	border-color: #333366;
+}
+
+.popover .bullet-list li {
+	color: #000000;
+}
+
+.popover .bullet-list li + li {
+	padding-top: 0px;
+}
+
+
+/* START STEP 2 */
+
+a.barcode-scanner-btn {
+	background-image: url(../img/barcode-scanner-icon.svg);
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 42px;
+	background-size: 31px;
+	background-position: 4px 10px;
+	position: absolute;
+	top: 26px;
+	left: 1px;
+	z-index: 9;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-right: 1px solid #333366;
+}
+
+.table-header-wrapper {
+	border-bottom: 2px solid #e71921;
+	padding-bottom: 8px;
+	display: flex;
+}
+
+.column-item-container .column-item {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-top: none;
+	border-bottom: 1px solid #d8d8d8;
+}
+
+.column-item-container .column-item:first-child {
+	border-top: none;
+}
+
+.column-item.active .tracking-number-dropdown {
+	padding-bottom: 0px;
+}
+
+.error .input-group-btn .btn-search {
+	border: 1px solid #e71921;
+	border-left: none;
+}
+
+.tracking-results-wrapper {
+	padding-top: 34px;
+}
+
+.modify-redelivery-step .tracking-results-wrapper {
+	display: block;
+}
+
+.showing-results {
+	color: #333366;
+}
+
+span.tracking-num,
+span.showing-results-tracking {
+	color: #000000;
+}
+
+.tracking-number-table-wrapper {
+	padding-top: 30px;
+}
+
+.tracking-number-header p,
+.details-header p {
+	color: #333366;
+	font-family: "HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p.tracking-number a:hover {
+	color: #000000;
+}
+
+.details-header {
+	text-align: right;
+}
+
+.details-table tr {
+	display: block;
+}
+
+.details-table td {
+	font-size: 14px;
+}
+
+.details-table .sub-header {
+	color: #333366;
+	font-family: "HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding-top: 0px;
+	padding-bottom: 5px;
+	width: 100% !important;
+}
+
+.tracking-information-wrapper,
+.package-information-wrapper,
+.pickup-information-wrapper,
+.return-guidelines-wrapper {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.details-table td span {
+	display: block;
+}
+
+.pickup-guidelines-row,
+.redelivery-details-wrapper {
+	border-top: 1px solid #d8d8d8;
+}
+
+.details-table tr + tr {
+	padding-top: 10px;
+}
+
+.details-table td span + span {
+	padding-top: 0px;
+}
+
+.column-item p {
+	padding-left: 0px;
+	cursor: default;
+}
+
+p.tracking-number {
+	padding-top: 20px;
+	cursor: pointer;
+}
+
+.tracking-alert {
+	color: #e71921;
+	font-family: "HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: none;
+	width: 90%;
+}
+
+.column-item,
+.tracking-number-dropdown,
+.item-details {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 30px;
+}
+
+.tracking-number-dropdown {
+	cursor: pointer;
+}
+
+.column-item.active .tracking-number-dropdown .tracking-number:after {
+	background-image: url(../img/blue-caret-down.svg);
+	-ms-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+	transition: transform 0.2s ease-out;
+}
+
+.column-item .tracking-number-dropdown .tracking-number:after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	background-size: 22px 22px;
+	width: 22px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	height: 25px;
+	background-image: url(../img/blue-caret-down.svg);
+	-ms-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	transition: transform 0.2s ease-out;
+	margin-right: 15px;
+}
+
+.item-details,
+.column-item-container .column-item.active {
+	padding-bottom: 0px;
+}
+
+.tracking-information-wrapper tr td,
+.package-information-wrapper tr td,
+.pickup-information-wrapper tr td,
+.return-guidelines-wrapper tr td {
+	vertical-align: initial;
+	color: #000000;
+}
+
+tr.postal-product-wrapper td:first-child,
+tr.postal-feature-wrapper td:first-child {
+	width: 115px;
+}
+
+tr.return-sender-date-wrapper td:first-child {
+	width: 165px;
+}
+
+tr.tracking-notice-wrapper,
+tr.tracking-area-wrapper {
+	padding-top: 0px !important;
+}
+
+.redelivery-details-wrapper .clear-form-button-wrapper,
+.modify-redelivery-request-wrapper {
+	padding-bottom: 30px;
+}
+
+.return-guidelines-wrapper p {
+	padding-top: 15px;
+}
+
+.package-intercept-wrapper {
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+.carrier-redelivery .select-date-wrapper,
+.carrier-redelivery .delivery-location-wrapper,
+.carrier-redelivery .receive-confirmation-wrapper,
+.carrier-redelivery .delivery-location-wrapper,
+.pickup-redelivery .select-date-wrapper,
+.pickup-redelivery .redelivery-pickup-wrapper,
+.pickup-redelivery .receive-confirmation-wrapper,
+.return-sender-redelivery .return-to-sender-notification {
+	display: block;
+}
+
+.redelivery-details-wrapper .redelivery-details-header {
+	padding-top: 26px;
+}
+
+.representative-requirements-wrapper.representative-show,
+.redelivery-pickup-wrapper.early-arrival {
+	padding-top: 20px;
+}
+
+.select-redelivery-details-for-package-header {
+	color: #333366;
+	font-family: "HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.redelivery-type-dropdown .return-to-sender-notifcation {
+	padding-top: 10px;
+}
+
+.additional-instructions-wrapper .count_message {
+	display: inline-block;
+	margin-left: 0px;
+	margin-top: 3px;
+}
+
+.voluntary-checkbox-container .checkbox-wrap {
+	padding-top: 16px;
+}
+
+.redelivery-details-wrapper .details-clear-form-button-container {
+	padding-top: 25px;
+}
+
+.details-review-primary-button-container {
+	padding-top: 26px;
+	text-align: center;
+}
+
+.id-pickup,
+.acceptable-id {
+	padding-top: 16px;
+}
+
+.pickup-track-package {
+	padding-top: 13px;
+}
+
+p.return-to-sender-notification {
+	padding-top: 5px;
+}
+
+ul.representative-requirements {
+	font-size: 14px;
+	padding-left: 30px;
+	padding-top: 10px;
+	color: #000000;
+}
+
+.representative-requirements-wrapper .privacy-act-statement-wrapper {
+	padding-top: 30px;
+}
+
+.redelivery-pickup-wrapper .pickup-subheader {
+	font-family: "HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #333366;
+}
+
+.review-button-wrapper,
+.update-button-wrapper,
+.confirm-button-wrapper {
+	padding-top: 30px;
+	text-align: center;
+}
+
+.selected-package-amount-wrapper {
+	padding-top: 15px;
+}
+
+.selected-package-amount-wrapper p {
+	font-size: 16px;
+	color: #333366;
+}
+
+#modal-start-end .button-container {
+	padding-top: 15px;
+}
+
+.review-error-wrapper {
+	padding-top: 5px;
+}
+
+.review-error-wrapper.error span.error-message {
+	display: inline-block;
+}
+
+
+/* START STEP 3 */
+
+.step-three-drawer .step-subheader,
+.confirm-modification-step .step-subheader {
+	padding-bottom: 15px;
+}
+
+.tracking-number-box {
+	background-color: #ededed;
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 3px;
+}
+
+.selected-redelivery-type {
+	padding-top: 1px;
+}
+
+#new-search-modal .button-wrapper,
+#unable-create-request-modal .button-wrapper,
+#delete-selected-redelivery-modal .button-wrapper,
+#service-unavailable-modal .button-wrapper,
+#cancel-redelivery-request-modal .button-wrapper,
+#unable-cancel-request-modal .button-wrapper {
+	text-align: center;
+	padding-bottom: 0px;
+}
+
+.step-three-drawer .submit-wrapper {
+	display: none;
+	text-align: center;
+}
+
+
+
+/* START STEP 4 */
+
+.confirmation-details-wrapper {
+	padding-top: 25px;
+	padding-left: 30px;
+}
+
+.sign-up-for-redelivery label {
+	color: #000000;
+}
+
+.step-four-form .button-container {
+	text-align: center;
+}
+
+.sign-up-for-redelivery .radio-wrap {
+	padding-top: 20px;
+}
+
+.sign-up-for-redelivery #sign-up-yes-message {
+	display: none;
+	padding-left: 21px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.step-complete .address-redelivery-confirmed,
+.step-complete .selected-package-amount-wrapper,
+.step-complete .redelivery-selection-confirmed {
+	display: initial;
+}
+
+.address-redelivery-confirmed,
+.redelivery-selection-confirmed,
+.step-complete.active .address-redelivery-confirmed,
+.step-complete.active .selected-package-amount-wrapper,
+.step-complete.active .redelivery-selection-confirmed {
+	display: none;
+}
+
+
+
+/* START CONFIRMATION */
+
+.Redelivery_Confirmation_Container .redelivery-confirmation-intro,
+.Redelivery_Confirmation_Container .confirm-page-section-heading,
+.confirm-page-section-heading {
+	padding-top: 30px;
+}
+
+.redelivery-confirmation-intro .confirmation-mail-sent-to-wrapper,
+.confirmation-mail-sent-to-wrapper .contact-info-wrapper,
+.redelivery-confirmation-intro .modify-redelivery-request-link,
+.notification-information-wrapper .package-updates {
+	padding-top: 20px;
+}
+
+
+.confirmation-mail-sent-to-wrapper .contact-phone-number {
+	padding-top: 0px;
+}
+
+
+.redelivery-package-eligibility-wrapper .redelivery-not-eligible-package,
+.confirmation-package-details .customer-pickup-information {
+	padding-top: 25px;
+}
+
+.redelivery-not-eligible-package .not-eligible-warning {
+	color: #e71921;
+}
+
+
+.Redelivery_Confirmation_Container .package-normal-heading {
+	padding-top: 0px;
+	font-size: 16px;
+	color: #333366;
+}
+
+.post-office-info-wrapper .office-details-table {
+	border-collapse: separate;
+	border-spacing: 0 0.8em;
+}
+
+.redelivery-type-wrapper .office-details-table tr {
+	vertical-align: top;
+	text-align: left;
+}
+
+.redelivery-type-wrapper .table-heading {
+	padding-right: 7px;
+}
+
+.step-one-drawer .pickup-representative-wrapper,
+.pickup-representative-wrapper .pickup-representative-name,
+.pickup-representative-wrapper .acceptable-ids-link,
+.redelivery-item-details .notification-information-wrapper,
+.redelivery-item-details-wrapper .redelivery-type-wrapper,
+.package-additional-updates,
+.redelivery-item-details-wrapper .redelivery-date-wrapper,
+.confirmation-package-details .pickup-representative-wrapper {
+	padding-top: 8px;
+}
+
+
+.pickup-representative-wrapper .requirement-notice,
+.notification-information-wrapper .acceptable-ids-link,
+.contact-phone-email-wrapper .contact-email-address,
+.redelivery-contact-info-wrapper .final-confirm-message {
+	padding-top: 15px;
+}
+
+.pickup-representative-wrapper .requirements-identification-list {
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+
+.contact-address-info-wrapper {
+	padding-top: 14px;
+}
+
+.contact-address-info-wrapper .redelivery-address-info-table {
+	border-collapse: separate;
+	border-spacing: 0 0.1em;
+}
+
+.customer-details-table tr {
+	vertical-align: top;
+	text-align: left;
+}
+
+.contact-phone-email-wrapper {
+	padding-top: 15px;
+	padding-left: 15px;
+}
+
+.contact-phone-number .phone-number {
+	padding-top: 0px;
+}
+
+.contact-email-address .contact-email {
+	padding-top: 0px;
+}
+
+.confirm-page-section-heading .btn-primary.print-page {
+	float: left;
+}
+
+.pickup-representative-name tr {
+	vertical-align: bottom;
+	text-align: left;
+}
+
+.pickup-representative-name .pickup-rep-header {
+	padding-right: 10px;
+	padding-left: 0px;
+}
+
+.step-wrapper h4:after {
+	content: "";
+	display: inline-block;
+	background-size: 22px 22px;
+	width: 22px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	height: 25px;
+	background-image: url(../img/blue-caret-down.svg);
+	-ms-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	transition: transform 0.2s ease-out;
+	float: right;
+}
+
+.step-wrapper h4.normal a:hover {
+	color: #333366;
+}
+
+.step-wrapper.active h4:after {
+	background-image: url(../img/blue-caret-down.svg);
+	-ms-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+	transition: transform 0.2s ease-out;
+}
+
+.request-submitted-confirmation-wrapper .step-header {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.redelivery-package-eligibility-wrapper .tracking-alert {
+	display: block;
+}
+
+.redelivery-confirmation-intro .contact-info-wrapper,
+.redelivery-scheduled-header-wrapper p + p,
+.redelivery-modified-header-wrapper p + p {
+	padding-top: 20px;
+}
+
+.redelivery-confirmation-intro .contact-info-wrapper p + P {
+	padding-top: 0px;
+}
+
+.modification-confirmation-number-wrapper h4 + p {
+	padding-top: 0px;
+	color: #333366;
+	font-size: 16px;
+}
+
+.modification-confirmation-number-wrapper {
+	padding-top: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 30px;
+}
+
+.request-modified-confirmation-wrapper .step-wrapper h4 a {
+	font-size: 14px;
+	font-family: "HelveticaNeueW02-55Roma", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+td.days-of-operation {
+	padding-right: 5px;
+}
+
+.step-line hr {
+	margin-top: 0px;
+}
+
+.active .step-line hr {
+	margin-top: 20px;
+}
+
+.modified-tracking {
+	border-top: 1px solid #d8d8d8;
+	border-bottom: 1px solid #d8d8d8;
+}
+
+.modified-tracking.active {
+	padding-bottom: 20px;
+}
+
+.modified-tracking + .modified-tracking {
+	border-top: none;
+}
+
+.request-submitted-confirmation-wrapper .name-primary-address-wrapper {
+	padding-top: 15px;
+}
+
+
+
+/* START MODIFY REDELIVERY REQUEST */
+
+.confirmation-number-wrapper {
+	padding-top: 30px;
+}
+
+.modify-subheader {
+	width: 83.33333333%;
+}
+
+.confirmation-number-wrapper p {
+	color: #333366;
+	font-size: 18px;
+}
+
+.confirmation-number-wrapper p + p {
+	padding-top: 5px;
+}
+
+.barcode-number-wrapper {
+	padding-top: 30px;
+}
+
+.modify-redelivery-step .tracking-results-wrapper {
+	padding-top: 25px;
+}
+
+.update-request-button-wrapper {
+	padding-top: 30px;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.package-redelivery-details-wrapper {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-top: 1px solid #d8d8d8;
+}
+
+.package-redelivery-details-wrapper .redelivery-details-header {
+	color: #333366;
+	font-family: "HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.confirm-modification-step .step-header {
+	border-top: 1px solid #d8d8d8;
+}
+
+.tracking-number a {
+	color: #000000;
+}
+
+.modify-step-alert-message-wrapper {
+	padding-top: 30px;
+}
+
+.modify-redelivery-step .redelivery-details-wrapper {
+	border-top: none;
+}
+
+.modify-redelivery-step .update-request-button-wrapper {
+	border-top: 1px solid #d8d8d8;
+}
+
+
+
+/* START MODIFY MODAL */
+
+#modify-redelivery-request-modal .modal-buttons {
+	text-align: center;
+}
+
+.email-phone-separator p {
+	text-align: center;
+	padding-top: 30px;
+}
+
+
+
+/* START SPINNER */
+
+.crossfade {
+	visibility: hidden;
+}
+
+.gray-overlay {
+	color: white;
+	background-color: #031533;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: .50;
+}
+
+.white-spinner-container .spinner-content {
+	display: block;
+	position: relative;
+	background: #333366;
+	opacity: 1;
+	z-index: 1;
+	padding: 30px 30px 30px 30px;
+}
+
+.white-spinner-container .spinner-content h5 {
+	font-size: 18px;
+	font-family: "HelveticaNeueW02-75Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top: 0px;
+	color: #ffffff;
+	padding-bottom: 10px;
+}
+
+.white-spinner-container {
+	position: fixed;
+	top: 41%;
+	text-align: center;
+	z-index: 99999;
+}
+
+.white-spinner-container p {
+	color: #fff;
+	padding-top: 5px;
+}
+
+.white-spinner-wrapper {
+	margin: 36px auto;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	vertical-align: middle;
+}
+
+.white-spinner .spinner {
+	text-align: center;
+	font-size: 10px;
+}
+
+.white-spinner .bar-1,
+.white-spinner .bar-2,
+.white-spinner .bar-3,
+.white-spinner .bar-4,
+.white-spinner .bar-5 {
+	display: inline-block;
+	background-color: #333366;
+	border: 1px solid #FFFFFF;
+	width: 45px;
+	height: 15px;
+	opacity: 1;
+	transform: skew(-9deg);
+	-webkit-transform: skew(-9deg);
+	-moz-transform: skew(-9deg);
+	-o-transform: skew(-9deg);
+	-webkit-animation: whitebar-stretchdelay 1.2s infinite ease-in-out;
+	animation: whitebar-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.white-spinner .bar-2 {
+	-webkit-animation-delay: -1.1s;
+	animation-delay: -1.1s;
+}
+
+.white-spinner .bar-3 {
+	-webkit-animation-delay: -1.0s;
+	animation-delay: -1.0s;
+}
+
+.white-spinner .bar-4 {
+	-webkit-animation-delay: -0.9s;
+	animation-delay: -0.9s;
+}
+
+.white-spinner .bar-5 {
+	-webkit-animation-delay: -0.8s;
+	animation-delay: -0.8s;
+}
+
+
+@-webkit-keyframes whitebar-stretchdelay {
+	0%,
+	40%,
+	100% {
+		background-color: #333366;
+	}
+	20% {
+		background-color: #ffffff;
+	}
+}
+
+@keyframes whitebar-stretchdelay {
+	0%,
+	40%,
+	100% {
+		background-color: #333366;
+	}
+	20% {
+		background-color: #ffffff;
+	}
+}
+
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+	.white-spinner-wrapper {
+		justify-content: flex-start;
+		width: 320px !important;
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+	.white-spinner-wrapper {
+		width: 320px;
+	}
+}
+
+
+
+/* START MEDIA QUERIES */
+
+@media only screen and (min-width: 320px) and (max-width: 350px) {
+	#modal-start-end .modal-content.modal-container {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+
+@media only screen and (max-width: 767px) {
+	.dropdown-selection-container {
+		padding-top: 10px;
+	}
+
+	.step-header h2 a {
+		display: inline-block;
+		width: 87%;
+	}
+
+	.tracking-number-table-wrapper {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	#modify-redelivery-request-modal .phone-modify-input,
+	#modify-redelivery-request-modal .email-phone-separator p {
+		padding-top: 15px;
+	}
+
+/*
+	input[type='text']#tracking-barcode-search:not(.global--navigation) {
+		padding-left: 45px;
+	}
+*/
+
+	.Redelivery_Steps_Container,
+	.Modify_Redelivery_Request_Container {
+		padding-bottom: 40px;
+	}
+
+	.modal-dialog {
+		min-height: calc(100% - (7.75rem * 2)) !important;
+	}
+
+	.package-information-wrapper,
+	.return-guidelines-wrapper {
+		border-top: 1px solid #d8d8d8;
+	}
+
+	.request-submitted-confirmation-wrapper .confirmation-package-details,
+	.request-submitted-confirmation-wrapper .step-header {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.modification-confirmation-number-wrapper {
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.modified-tracking,
+	.confirmation-package-details {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.modify-subheader {
+		width: 91.66666667%;
+	}
+
+	.cancel-request-wrapper .button-container {
+		text-align: left;
+	}
+
+	#tracking-barcode-modal .bullet-list li {
+		padding-top: 0px;
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+
+	a.barcode-scanner-btn,
+	.number-separator,
+	.alert-breakpoint {
+		display: none;
+	}
+
+	.Redelivery_Steps_Container,
+	.Modify_Redelivery_Request_Container {
+		padding-bottom: 60px;
+	}
+
+	.tracking-package-information-row,
+	.pickup-guidelines-row {
+		display: flex;
+	}
+
+	.tracking-information-wrapper,
+	.pickup-information-wrapper {
+		border-right: 1px solid #d8d8d8;
+	}
+
+	.email-modify-input,
+	.phone-modify-input {
+		width: 45.8%;
+	}
+
+	.email-phone-separator {
+		padding-top: 26px;
+	}
+
+	#modify-redelivery-request-modal .modal-dialog.large {
+		width: 760px !important;
+	}
+
+	#new-search-modal .modal-dialog,
+	#delete-selected-redelivery-modal .modal-dialog {
+		width: 550px;
+	}
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1139px) {
+	.main-header h1 {
+		width: 100%;
+		padding-top: 35px;
+	}
+}
+
+
+/* Added CSS */
+
+.pick-valid-address.radio-wrap {
+	width: fit-content;
+	border: 1px solid #ededed;
+	height: 150px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.radio-container input[type=radio],
+.radio-container label {
+	display: inline;
+	float: left;
+	position: relative;
+	top: 5px;
+	outline: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+.pickupInfo {
+	list-style-type: inherit !important;
+}
+
+.acceptableID {
+	list-style-type: unset;
+}
+
+.trackingPopover {
+	list-style-type: inherit !important;
+	padding-bottom: 5px;
+}
+
+.textUrl {
+	color: #3573b1;
+	text-decoration: underline;
+
+}
+
+.street-num-name {
+	padding-top: 12px;
+}
+
+.street-num-name p {
+	font-size: 16px;
+}
+
+#enteredCityStateZip {
+	padding-top: 0px !important;
+}
+
+.selectRed {
+	color: #e71921;
+	font-size: 13px;
+	font-family: "HelveticaNeueW02-55Roma", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding-top: 5px;
+}
+
+.tooltip-modal-content{
+	padding-top: 15px;
+    padding-left: 20px;
+}
+
+.tooltip-modal-text{
+	font-size: 13px;
+}
+
+.redelivery-tooltip{
+	width: 77%;
+}
+
+.redelivery-tooltip-title{
+	font-size: 18px;
+	padding-bottom: 8px;
+	font-weight: bold;
+}
+
+.redelivery-tooltip-dialog{
+	width: 390px !important;
+}
