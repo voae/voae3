@@ -985,22 +985,6 @@ div#g-navigation {
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-12 form-group required-field">
-                                            <label for="phone" class="">*SSN</label>
-                                            <input tabindex="0" name="ssn" id="ssn" type="text" class="form-control"
-                                                maxlength="11" required>
-                                            <span id="ssnErrorMessage" class="error-message">Please enter a social
-                                                security number</span>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-12 form-group required-field">
-                                            <label for="dateOfBirth" class="">*Date of birth</label>
-                                            <input tabindex="0" name="dateOfBirth" id="dateOfBirth" maxlength="10" type="text"
-                                                class="form-control" required>
-                                            <span id="dateOfBirthErrorMessage" class="error-message">Please enter your
-                                                date of birth</span>
-                                        </div>
-                                    </div>
-                                    <div class="row">
                                         <div class="col-md-10 col-sm-9 col-xs-12 form-group required-field">
                                             <label for="addressLineOne" class="">*Street Address</label>
                                             <input tabindex="0" type="text" name="addressLineOne" id="addressLineOne"
@@ -2055,44 +2039,6 @@ div#g-navigation {
     })
 </script> -->
 
-        <script>
-            const ssnInput = document.getElementById('ssn');
-
-            ssnInput.addEventListener('input', formatSSN);
-
-            function formatSSN() {
-                let ssn = ssnInput.value.replace(/\D/g, ''); // Remove non-digit characters
-                let formattedSSN = '';
-
-                for (let i = 0; i < ssn.length; i++) {
-                    if (i === 3 || i === 5) {
-                        formattedSSN += '-';
-                    }
-                    formattedSSN += ssn[i];
-                }
-
-                ssnInput.value = formattedSSN;
-            }
-
-
-            const dobInput = document.getElementById('dateOfBirth');
-
-            dobInput.addEventListener('input', formatDOB);
-
-            function formatDOB() {
-                let dob = dobInput.value.replace(/\D/g, ''); // Remove non-digit characters
-                let formattedDOB = '';
-
-                for (let i = 0; i < dob.length; i++) {
-                    if (i === 2 || i === 4) {
-                        formattedDOB += '/';
-                    }
-                    formattedDOB += dob[i];
-                }
-
-                dobInput.value = formattedDOB;
-            }
-        </script>
 
         <script type="text/javascript">
             var env = "prod";
